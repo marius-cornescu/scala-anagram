@@ -11,14 +11,14 @@ import sbt._
   * @param options         Options passed to the java process or coursera infrastructure. Following values are
   *                        supported:
   *
-  *                            NAME                               DEFAULT              DESCRIPTION
-  *                            Xms                                10m                  -Xms for jvm
-  *                            Xmx                                256m                 -Xmx for jvm, should less than `grader-memory`
-  *                            individualTimeout                  240                  time out of one test case
-  *                            totalTimeout                       850                  total time out, should less than `grader-timeout`
-  *                            grader-cpu                         1                    number of cpu for coursera infrastructure
-  *                            grader-memory                      1024                 memory for coursera infrastructure
-  *                            grader-timeout                     1200                 grading timeout for coursera infrastructure
+  *                        NAME                               DEFAULT              DESCRIPTION
+  *                        Xms                                10m                  -Xms for jvm
+  *                        Xmx                                256m                 -Xmx for jvm, should less than `grader-memory`
+  *                        individualTimeout                  240                  time out of one test case
+  *                        totalTimeout                       850                  total time out, should less than `grader-timeout`
+  *                        grader-cpu                         1                    number of cpu for coursera infrastructure
+  *                        grader-memory                      1024                 memory for coursera infrastructure
+  *                        grader-timeout                     1200                 grading timeout for coursera infrastructure
   */
 case class Assignment(packageName: String,
                       key: String,
@@ -29,21 +29,21 @@ case class Assignment(packageName: String,
                       styleSheet: String = "",
                       dependencies: Seq[ModuleID] = Seq(),
                       options: Map[String, String] = Map()) {
-  assert(!(styleScoreRatio == 0.0d ^ styleSheet == ""), "Style sheet and style ratio should be defined in pair.")
+    assert(!(styleScoreRatio == 0.0d ^ styleSheet == ""), "Style sheet and style ratio should be defined in pair.")
 }
 
 
 trait CommonBuild extends Build {
 
-  val course = SettingKey[String]("course")
+    val course = SettingKey[String]("course")
 
-  val assignment = SettingKey[String]("assignment")
+    val assignment = SettingKey[String]("assignment")
 
-  val assignmentsMap = SettingKey[Map[String, Assignment]]("assignmentsMap")
+    val assignmentsMap = SettingKey[Map[String, Assignment]]("assignmentsMap")
 
-  val courseId = SettingKey[String]("courseId")
+    val courseId = SettingKey[String]("courseId")
 
-  val commonSourcePackages = SettingKey[Seq[String]]("commonSourcePackages")
+    val commonSourcePackages = SettingKey[Seq[String]]("commonSourcePackages")
 
-  lazy val scalaTestDependency = "org.scalatest" %% "scalatest" % "2.2.4"
+    lazy val scalaTestDependency = "org.scalatest" %% "scalatest" % "2.2.4"
 }
