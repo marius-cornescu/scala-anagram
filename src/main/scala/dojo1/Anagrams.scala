@@ -105,8 +105,11 @@ object Anagrams {
     }
   }
   def combinations(occurrences: Occurrences): List[Occurrences] = {
-//    combinations(occurrences, 0, List())
-      combination_signle_char()
+//  combinations(occurrences, 0, List())
+    combination_single_char('a', 0)
+
+    val list = List()
+    list
   }
 
   /** Subtracts occurrence list `y` from occurrence list `x`.

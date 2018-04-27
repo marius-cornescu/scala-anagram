@@ -26,8 +26,7 @@ package object common {
   }
 
   /**
-   * Get a resource from the `src/main/resources` directory. Eclipse does not copy
-   * resources to the output directory, then the class loader cannot find them.
+   * Get a resource from the `src/main/resources` directory.
    */
   def resourceAsStreamFromSrc(resourcePath: List[String]): Option[java.io.InputStream] = {
     val classesDir = new File(getClass.getResource(".").toURI)

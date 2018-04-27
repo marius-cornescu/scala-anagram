@@ -1,4 +1,5 @@
 package object dojo1 {
+
   val dictionaryPath = List("dojo1", "linuxwords.txt")
 
   def loadDictionary = {
