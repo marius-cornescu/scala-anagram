@@ -1,0 +1,10 @@
+.metadata/
+**/target/*
+*.iml
+*.iws
+*.ipr
+**/logs/*
+.settings
+.classpath
+.idea/
+connector/out
