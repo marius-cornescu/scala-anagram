@@ -1,73 +1,8 @@
-name := course.value + "-" + assignment.value
 
-scalaVersion := "2.11.7"
+name := "dojo" + "-" + "scala-anagram"
 
-scalacOptions ++= Seq("-deprecation")
+version := "0.1"
 
-// grading libraries
-libraryDependencies += "junit" % "junit" % "4.10" % "test"
+scalaVersion := "2.12.5"
 
-// for funsets
-libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4"
-
-// include the common dir
-commonSourcePackages += "common"
-
-courseId := "bRPXgjY9EeW6RApRXdjJPw"
-
-// See documentation in ProgFunBuild.scala
-assignmentsMap := {
-  val styleSheetPath = (baseDirectory.value / ".." / ".." / "project" / "scalastyle_config.xml").getPath
-  Map(
-    "example" -> Assignment(
-      packageName = "example",
-      key = "g4unnjZBEeWj7SIAC5PFxA",
-      itemId = "xIz9O",
-      partId = "d5jxI",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath),
-    "recfun" -> Assignment(
-      packageName = "recfun",
-      key = "SNYuDzZEEeWNVyIAC92BaQ",
-      itemId = "Ey6Jf",
-      partId = "PzVVY",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath),
-    "funsets" -> Assignment(
-      packageName = "funsets",
-      key = "FNHHMDfsEeWAGiIAC46PTg",
-      itemId = "BVa6a",
-      partId = "IljBE",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath),
-    "objsets" -> Assignment(
-      packageName = "objsets",
-      key = "6PTXvD99EeWAiCIAC7Pj9w",
-      itemId = "Ogg05",
-      partId = "7hlkb",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath,
-      options = Map("grader-timeout" -> "1800")),
-    "patmat" -> Assignment(
-      packageName = "patmat",
-      key = "BwkTtD9_EeWFZSIACtiVgg",
-      itemId = "uctOq",
-      partId = "2KYZc",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath),
-    "dojo1" -> Assignment(
-      packageName = "dojo1",
-      key = "CPJe397VEeWLGArWOseZkw",
-      itemId = "nVRPb",
-      partId = "v2XIe",
-      maxScore = 10d,
-      styleScoreRatio = 0.2,
-      styleSheet = styleSheetPath,
-      options = Map("grader-timeout" -> "1800"))
-  )
-}
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5"
