@@ -1,2 +1,2 @@
-course := "progfun1"
-assignment := "forcomp"
+course := "scala-anagram"
+assignment := "dojo1"

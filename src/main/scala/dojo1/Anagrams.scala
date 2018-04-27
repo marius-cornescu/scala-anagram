@@ -1,4 +1,4 @@
-package forcomp
+package dojo1
 
 
 object Anagrams {
@@ -101,7 +101,7 @@ object Anagrams {
   def combination_single_char(pair: (Char,Int)): Occurrences = {
     pair match {
       case(_,0) => Nil
-      case (c,i)=> (c,i)::combonation_single_char(c,i-1)
+      case (c,i)=> (c,i)::combination_single_char(c,i-1)
     }
   }
   def combinations(occurrences: Occurrences): List[Occurrences] = {

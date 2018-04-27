@@ -60,8 +60,8 @@ assignmentsMap := {
       maxScore = 10d,
       styleScoreRatio = 0.2,
       styleSheet = styleSheetPath),
-    "forcomp" -> Assignment(
-      packageName = "forcomp",
+    "dojo1" -> Assignment(
+      packageName = "dojo1",
       key = "CPJe397VEeWLGArWOseZkw",
       itemId = "nVRPb",
       partId = "v2XIe",

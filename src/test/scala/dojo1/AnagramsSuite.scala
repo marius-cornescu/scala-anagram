@@ -1,4 +1,4 @@
-package forcomp
+package dojo1
 
 import org.scalatest.FunSuite
 
